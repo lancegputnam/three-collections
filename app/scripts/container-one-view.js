@@ -29,8 +29,6 @@ var ContainerViewOne = Backbone.View.extend({
   },
 
 	slideFirst: function() {
-		this.model.destroy();
-		this.remove();
 
 		ContainerViewOne.add(this.$el.get({ model: 'url' }))
 		// $('.box-one').html('');
@@ -41,8 +39,6 @@ var ContainerViewOne = Backbone.View.extend({
 	},
 
 	slideSecond: function()  {
-		this.model.destroy();
-		this.remove();
 
 		ContainerViewOne.add(this.$el.get({ model: 'url' }))
 		// $('.box-two').html('');
@@ -50,5 +46,10 @@ var ContainerViewOne = Backbone.View.extend({
 
 		var renderTemp = this.containerTemplateOne(this.model.attributes)
 		this.$el.html(renderTemp);
-	}  
+	},
+
+	destroy: function()  {
+		this.model.destroy();
+		this.remove();
+	},
 });

@@ -28,10 +28,24 @@ body {
     margin-left: 28px;
 }
 
+@media screen and (min-width: 600px) {
+    
+    h1 {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    
+    h1 {
+        font-size: 2em;
+    }
+}
+
 .box-one {
     position: relative;
     background: #53a4d7;
-    width: 400px;
+    width: 28%;
     height: 600px;
     display: inline-block;
     float: left;
@@ -48,7 +62,7 @@ body {
 .box-two {
     background: #53a4d7;
     position: relative;
-    width: 400px;
+    width: 28%;
     height: 600px;
     display: inline-block;
     float: left;
@@ -64,7 +78,7 @@ body {
 .box-three {
     background: #53a4d7;
     position: relative;
-    width: 400px;
+    width: 28%;
     height: 600px;
     display: inline-block;
     float: left;
@@ -121,6 +135,7 @@ body {
     padding-top: 21px;
     padding-left: 35px;
 }
+
 
 
 

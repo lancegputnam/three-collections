@@ -25,8 +25,6 @@ var ContainerViewTwo = Backbone.View.extend({
   },
 
   slideFirst: function() {
-    this.model.destroy();
-    this.remove();
 
     ContainerViewTwo.add(this.$el.get({ model: 'url' }))
     // $('.box-one').html('');
@@ -37,8 +35,6 @@ var ContainerViewTwo = Backbone.View.extend({
   },
 
   slideSecond: function()  {
-    this.model.destroy();
-    this.remove();
 
     ContainerViewTwo.add(this.$el.get({ model: 'url' }))
     // $('.box-two').html('');
@@ -47,25 +43,10 @@ var ContainerViewTwo = Backbone.View.extend({
     var renderTemp = this.containerTemplateTwo(this.model.attributes)
     this.$el.html(renderTemp);
   },
+
+  destroy: function()  {
+    this.model.destroy();
+    this.remove();
+  },
+
 });
-
-
-// jump3: function(){
-//     $.post('http://tiny-pizza-server.herokuapp.com/collections/lances-photos-three', {
-//       url: this.model.attributes.url,
-//     });
-//     this.model.destroy().done(function(){
-//       $('.box-three').html('');
-//       $('.box-three').append('');
-//       var app = new AppView();
-//     })
-//   },
-
-//   jump4: function(){
-//     $.post('http://tiny-pizza-server.herokuapp.com/collections/lances-photos-one', {
-//       url: this.model.attributes.url,
-//     });
-//     this.model.destroy().done(function(){
-//       $('.box-one').html('');
-//       $('.box-one').append('');
-//       var app = new AppView();
