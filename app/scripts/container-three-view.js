@@ -48,26 +48,3 @@ var ContainerViewThree = Backbone.View.extend({
   
   },
 });
-
-
-
-// jump5: function(){
-//     $.post('http://tiny-pizza-server.herokuapp.com/collections/lances-photos-one', {
-//       url: this.model.attributes.url,
-//     });
-//     this.model.destroy().done(function(){
-//       $('.box-two').html('');
-//       $('.box-two').append('');
-//       var app = new AppView();
-//     })
-//   },
-
-//   jump6: function(){
-//     $.post('http://tiny-pizza-server.herokuapp.com/collections/lances-photos-one', {
-//       url: this.model.attributes.url,
-//     });
-//     this.model.destroy().done(function(){
-//       $('.box-one').html('');
-//       $('.box-one').append('');
-//       var app = new AppView();
-//     })

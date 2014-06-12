@@ -1,22 +1,22 @@
 var AppView = Backbone.View.extend({
 
   initialize: function(){
-    var coolPhotos = new PhotoCollectionOne();
-    var coolerPhotos = new PhotoCollectionTwo();
-    var coolestPhotos = new PhotoCollectionThree();
+    var groupOnePhotos = new PhotoCollectionOne();
+    var groupTwoPhotos = new PhotoCollectionTwo();
+    var groupThreePhotos = new PhotoCollectionThree();
 
-    coolPhotos.fetch();
-    coolerPhotos.fetch();
-    coolestPhotos.fetch();
+    groupOnePhotos.fetch();
+    groupTwoPhotos.fetch();
+    groupThreePhotos.fetch();
 
-    this.listenTo(coolPhotos, 'add', function(photo1){
-      new ContainerViewOne({model: photo1});
+    this.listenTo(groupOnePhotos, 'add', function(photoOne){
+      new ContainerViewOne({model: photoOne});
     });
-    this.listenTo(coolerPhotos, 'add', function(photo2){
-      new ContainerViewTwo({model: photo2});
+    this.listenTo(groupTwoPhotos, 'add', function(photoTwo){
+      new ContainerViewTwo({model: photoTwo});
     });
-    this.listenTo(coolestPhotos, 'add', function(photo3){
-      new ContainerViewThree({model: photo3})
+    this.listenTo(groupThreePhotos, 'add', function(photoThree){
+      new ContainerViewThree({model: photoThree})
     });
   },
 });
