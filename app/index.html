@@ -14,6 +14,7 @@
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
+        <link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
         <!-- endbuild -->
     </head>
     <body>
@@ -21,21 +22,63 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-
-        <div class="hero-unit">
-          <h1>'Allo, 'Allo!</h1>
-          <p>You now have</p>
-          <ul>
-            <li>HTML5 Boilerplate</li>
-            <li>Sass</li>
-
-          </ul>
+        <div class="header">
+            <div class="header-image">
+                <img src='http://1.bp.blogspot.com/-lFz8CUVoINM/UX8PiBLfnSI/AAAAAAAAAZk/Olgbt78foh4/s1600/17618576-i-love-90s.jpg' width="50" height="50" />
+            </div>
+            <h1> I Love the 90s </h1>
         </div>
+
+        <div class="container">
+            <div class="box-one"> Products of the 90s</div>
+            <div class="box-two"> Remember This </div>
+            <div class="box-three"> Remember Not </div>
+        </div>
+
+        <script type="text/template" class="template-one">
+                <img src="<%= url %>" width="300" height="300"/>
+                <div class="slide-button-one button">YES</div>
+                <div class="slide-button-two button">NO</div>
+                <div class="deletebutton button">DELETE</div>
+        </script>
+
+        <script type="text/template" class="template-two">
+                <img src="<%= url %>" width="300" height="300"/>
+                <div class="slide-button-one button">YES</div>
+                <div class="slide-button-two button">NO</div>
+                <div class="deletebutton button">DELETE</div>
+        </script>
+
+        <script type="text/template" class="template-three">
+                <img src="<%= url %>" width="300" height="300"/>
+                <div class="slide-button-one button">YES</div>
+                <div class="slide-button-two button">NO</div>
+                <div class="deletebutton button">DELETE</div>
+        </script>
+
+        <div class="footer">
+            <div class="foottext1">
+                <span> I Love the 90s Copyright 2014, All Rights Reserved </span>
+            </div>
+        </div>
+         
+
+       <!--  <div class="main-container">
+            <div class="container-one"> To Do </div>
+            <div class="container-two"> Urgent </div>
+            <div class="container-three"> Completed </div>
+        </div> -->
+
+         <!--    // <div class="move-left button">move left</div>
+            // <div class="move-center button">move center</div>
+            // <div class="move-right button">move right</div> -->
 
 
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="../bower_components/jquery/dist/jquery.js"></script>
+        <script src="../bower_components/underscore/underscore.js"></script>
+        <script src="../bower_components/backbone/backbone.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -50,6 +93,10 @@
         </script>
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/container-one-view.js"></script>
+        <script src="scripts/container-two-view.js"></script>
+        <script src="scripts/container-three-view.js"></script>
+        <script src="scripts/model.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>
