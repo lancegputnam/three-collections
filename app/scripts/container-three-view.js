@@ -23,25 +23,22 @@ var ContainerViewThree = Backbone.View.extend({
     }
   },
 
-  slideFirst: function() {
-
-    ContainerViewThree.add(this.$el.get({ model: 'url' }))
-    // $('.box-one').html('');
-    $('.box-one').append(this.el);
+  slideToYes: function() {
+    console.log(this.model)
+    groupTwoPhotos.add(this.model)
+    $('.box-two').append(this.el);
 
     var renderTemp = this.containerTemplateThree(this.model.attributes)
     this.$el.html(renderTemp);
   },
 
-  slideSecond: function()  {
-
-    ContainerViewThree.add(this.$el.get({ model: 'url' }))
-    // $('.box-two').html('');
-    $('.box-two').append(this.el);
+  slideToNo: function()  {
+    console.log(this.model)
+    groupTwoPhotos.add(this.model)
+    $('.box-three').append(this.el);
 
     var renderTemp = this.containerTemplateThree(this.model.attributes)
     this.$el.html(renderTemp);
-  
   },
 
   destroy: function()  {

@@ -7,9 +7,9 @@ var ContainerViewOne = Backbone.View.extend({
 
   events: {
 
-    'click .slide-button-one'	: 'slideFirst',
-    'click .slide-button-two'	: 'slideSecond',
-    'click .deletebutton'		: 'destroy',
+    'click .slide-button-one'	: 'slideToYes',
+    'click .slide-button-two'	: 'slideToNo',
+    'click .deletebutton'		  : 'destroy',
 
   },
 
@@ -24,28 +24,37 @@ var ContainerViewOne = Backbone.View.extend({
     if (this.model.attributes.hasOwnProperty('url')) {
       var renderTemplate = this.containerTemplateOne(this.model.attributes);
       this.$el.html(renderTemplate);
+      //shorthand method to chain, recommended to put on render 
       return this;
     }
   },
 
-	slideFirst: function() {
-
-		ContainerViewOne.add(this.$el.get({ model: 'url' }))
-		// $('.box-one').html('');
-		$('.box-one').append(this.el);
-
-		var renderTemp = this.containerTemplateOne(this.model.attributes)
-		this.$el.html(renderTemp);
-	},
-
-	slideSecond: function()  {
-
-		ContainerViewOne.add(this.$el.get({ model: 'url' }))
-		// $('.box-two').html('');
+	slideToYes: function() {
+    console.log(this.model)
+		groupTwoPhotos.add(this.model)
 		$('.box-two').append(this.el);
 
 		var renderTemp = this.containerTemplateOne(this.model.attributes)
 		this.$el.html(renderTemp);
+
+    // this is not saving!!
+    this.model.save().done(function() {
+      this.$el.find('.status').html('Saved!');
+    });
+	},
+
+	slideToNo: function()  {
+    console.log(this.model)
+    groupTwoPhotos.add(this.model)
+    $('.box-three').append(this.el);
+
+		var renderTemp = this.containerTemplateOne(this.model.attributes)
+		this.$el.html(renderTemp);
+
+    // this is not saving!!!
+    this.model.save().done(function() {
+      this.$el.find('.status').html('Saved!');
+    });
 	},
 
 	destroy: function()  {

@@ -12,7 +12,7 @@ var PhotoCollectionOne = Backbone.Collection.extend({
 
   model: Photo,
 
-  url: 'http://tiny-pizza-server.herokuapp.com/collections/lances-photos-one'
+  url: 'http://tiny-pizza-server.herokuapp.com/collections/photos-lance'
 });
 
 var PhotoCollectionTwo = Backbone.Collection.extend({
