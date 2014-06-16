@@ -1,10 +1,3 @@
-// var collectionsArray = [
- 
-//   new PhotoCollection({url: 'http://tiny-pizza-server.herokuapp.com/collections/photos-lance'}),
-//   new PhotoCollection({url: 'http://tiny-pizza-server.herokuapp.com/collections/lances-photos-two'}),
-//   new PhotoCollection({url: 'http://tiny-pizza-server.herokuapp.com/collections/lances-photos-three'}),
-// ]
-
 var AppView = Backbone.View.extend({
 
   initialize: function(){
