@@ -1,7 +1,7 @@
 90's Three Collections Model Mover
 =================
 
-Three Collections uses Backbone and moves images from one category to another through set buttons. Responsive Design was also added to the webpage. 
+Three Collections uses Backbone and slides images from one category to another through set buttons. Responsive Design was also added to the webpage. 
 
 Primary Technologies: <br>
 HTML, CSS, JavaScript, Backbone, Responsive Design
